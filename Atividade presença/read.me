@@ -1,0 +1,198 @@
+REVISÃO DE ESTRUTURA DE ÁRVORES
+
+Disciplina: Estrutura de Dados II
+Curso: Ciência da Computação
+Professora: Kadidja Valéria
+Aluno(a): Beatriz
+Data: //____
+
+ETAPA 1. REVISÃO BIBLIOGRÁFICA
+1. Árvore
+
+Uma árvore é uma estrutura de dados hierárquica formada por nós que possuem relações entre si. Ela começa por um nó chamado raiz. Os outros nós podem ter relações de pai e filho.
+
+Entre os principais conceitos estão raiz, pai, filho, folha, irmãos, subárvore, níveis e altura.
+
+As árvores podem ser usadas para organizar informações de forma hierárquica e facilitar algumas operações com os dados.
+
+Referências utilizadas: material Árvores simples e busca básica e material de apoio sobre árvores utilizado na disciplina.
+
+2. Árvore binária
+
+Uma árvore binária é uma árvore em que cada nó pode ter no máximo dois filhos. Eles são chamados de filho esquerdo e filho direito.
+
+Um nó pode não ter filhos, ter apenas um ou ter dois.
+
+Uma árvore binária não precisa seguir uma regra de ordenação dos valores. Essa característica diferencia uma árvore binária comum de uma árvore binária de busca.
+
+Referência utilizada: material Árvores simples e busca básica da disciplina Estrutura de Dados II.
+
+3. Árvore Binária de Busca ABB
+
+A Árvore Binária de Busca, ou ABB, possui uma regra para organizar os valores.
+
+Os valores menores que um nó ficam à esquerda. Os valores maiores ficam à direita. Normalmente, valores repetidos não são utilizados.
+
+Essa organização facilita a busca. Primeiro é feita uma comparação com o nó atual. Se o valor procurado for menor, a busca continua pela esquerda. Se for maior, continua pela direita.
+
+Na inserção acontece algo parecido. As comparações continuam até encontrar uma posição vazia para colocar o novo valor.
+
+A forma da árvore influencia o custo da busca. Uma árvore mais equilibrada tende a permitir buscas mais eficientes. Já uma árvore muito inclinada pode ficar parecida com uma lista e aumentar o custo da operação.
+
+Referência utilizada: Árvores simples e busca básica, Estrutura de Dados II.
+
+4. Árvore AVL
+
+A árvore AVL é uma árvore binária de busca balanceada. Seu objetivo é evitar que a árvore fique muito inclinada para um dos lados.
+
+Quando uma inserção causa um desequilíbrio, podem ser usadas rotações para reorganizar os nós.
+
+Na Aula Inaugural de Estrutura de Dados II, as árvores balanceadas aparecem como parte do conteúdo avançado da disciplina. A AVL é citada diretamente como um dos exemplos.
+
+Referência utilizada: Aula Inaugural, Estrutura de Dados II, da professora Kadidja Valéria.
+
+5. Árvore Red Black
+
+A árvore Red Black também é uma árvore de busca balanceada.
+
+Ela utiliza duas cores para os nós, vermelho e preto. Durante as operações de inserção e ajuste, podem acontecer mudanças de cor e rotações para manter as propriedades da árvore.
+
+Assim como a AVL, seu objetivo está relacionado ao controle da altura da árvore e à manutenção de uma estrutura adequada para as operações de busca.
+
+A Aula Inaugural apresenta a Red Black junto das árvores balanceadas que serão estudadas na disciplina.
+
+Referência utilizada: Aula Inaugural, Estrutura de Dados II, da professora Kadidja Valéria.
+
+6. Árvores B e B+
+
+As árvores B e B+ aparecem no enunciado da atividade, mas não foram localizadas de forma específica nos materiais fornecidos.
+
+Por isso, não atribuo a explicação dessas estruturas a nenhuma das referências da disciplina.
+
+No enunciado, a árvore B é apresentada como uma estrutura que pode armazenar várias chaves em uma página. Quando a página fica cheia, ela pode ser dividida.
+
+A árvore B+ é apresentada como uma estrutura em que os índices levam às folhas, onde ficam os registros. As folhas podem ser ligadas para facilitar consultas por intervalo.
+
+Referência: enunciado da atividade.
+
+7. Heap
+
+O heap também não foi encontrado nos materiais fornecidos como um conteúdo específico sobre árvores.
+
+No enunciado, ele aparece como exemplo de uma fila em que a tarefa de maior prioridade fica no topo. Essa situação corresponde a um max heap.
+
+Referência: enunciado da atividade.
+
+8. Trie
+
+A trie também não foi localizada nos materiais fornecidos.
+
+No enunciado, ela aparece como uma estrutura usada em índices que percorrem letras sucessivas e aproveitam prefixos que são iguais.
+
+A identificação da trie nesta atividade foi feita com base nessa descrição.
+
+Referência: enunciado da atividade.
+
+ETAPA 2. COMPARAÇÃO DAS ESTRUTURAS
+Estrutura	Organização	Principal propriedade	Busca e operação	Ajustes	Referência
+ABB	Os valores menores ficam à esquerda e os maiores à direita	Regra de ordenação dos valores	As comparações indicam se a busca deve seguir pela esquerda ou pela direita	A forma da árvore pode influenciar o custo	Árvores simples e busca básica
+AVL	Árvore binária de busca balanceada	Controle do equilíbrio da árvore	A busca segue as comparações entre os valores	Rotações	Aula Inaugural de ED II
+Red Black	Árvore de busca balanceada	Regras relacionadas às cores dos nós	A busca segue as comparações entre os valores	Recoloração e rotações	Aula Inaugural de ED II
+B	Várias chaves podem ficar na mesma página	Organização por páginas e divisão quando necessário	A busca utiliza as chaves	Divisão de páginas	Enunciado da atividade
+B+	Os índices levam às folhas que armazenam os registros	Organização dos registros nas folhas	A busca utiliza os índices	Ajustes na estrutura das folhas	Enunciado da atividade
+Árvore binária	Cada nó pode ter no máximo dois filhos	Limite de dois filhos por nó	Depende da organização da árvore	Não possui necessariamente balanceamento	Árvores simples e busca básica
+Heap	Estrutura organizada por prioridade	O maior valor fica no topo no max heap	Permite acesso ao elemento de maior prioridade	Reorganização para manter a propriedade	Enunciado da atividade
+Trie	Organizada por caracteres e prefixos	Compartilhamento de prefixos	A busca percorre os caracteres sucessivamente	Ajustes conforme a inserção ou remoção	Enunciado da atividade
+
+A Aula Inaugural apresenta as árvores balanceadas como parte do conteúdo de Estrutura de Dados II e cita diretamente AVL e Red Black. Também retoma as árvores binárias como um dos fundamentos da disciplina.
+
+A Aula 02 apresenta a importância das estruturas de dados para organizar informações e realizar operações de maneira simples, eficiente e escalável.
+
+ETAPA 3. RELAÇÃO COM AS ANALOGIAS
+1. Prateleira de números que se reorganiza quando um lado fica muito alto
+
+Resposta: Árvore AVL
+
+A situação representa uma árvore binária de busca que precisa continuar equilibrada. Quando um lado fica muito alto, podem ser usadas rotações para reorganizar a árvore.
+
+A relação faz sentido porque a AVL é uma árvore de busca balanceada.
+
+Referência: Aula Inaugural, Estrutura de Dados II.
+
+2. Catálogo que armazena várias chaves por página e divide a página quando ela fica cheia
+
+Resposta: Árvore B
+
+A situação corresponde à árvore B porque o enunciado apresenta uma estrutura organizada em páginas que podem armazenar várias chaves. Quando uma página fica cheia, ela pode ser dividida para reorganizar os dados.
+
+Referência: enunciado da atividade.
+
+3. Fila em que a tarefa de maior prioridade fica no topo
+
+Resposta: Max heap
+
+A situação representa um max heap porque o elemento de maior prioridade fica no topo da estrutura.
+
+Referência: enunciado da atividade.
+
+4. Índice que percorre letras sucessivas e aproveita prefixos comuns
+
+Resposta: Trie
+
+A situação corresponde a uma trie porque os caminhos da estrutura representam sequências de caracteres. Palavras que começam da mesma forma podem compartilhar parte do caminho.
+
+Referência: enunciado da atividade.
+
+5. Estrutura que utiliza cores, recolorações e rotações para controlar a altura
+
+Resposta: Árvore Red Black
+
+A situação corresponde à árvore Red Black. Ela utiliza cores associadas aos nós e pode realizar recolorações e rotações para manter suas propriedades e controlar o crescimento da árvore.
+
+A Aula Inaugural apresenta a Red Black junto das árvores balanceadas estudadas em Estrutura de Dados II.
+
+Referência: Aula Inaugural, Estrutura de Dados II.
+
+6. Índice que leva às folhas, onde estão os registros ligados para consultas por intervalo
+
+Resposta: Árvore B+
+
+A situação corresponde à B+ porque o enunciado descreve uma estrutura em que os índices levam às folhas, onde ficam os registros. O encadeamento das folhas facilita consultas que envolvem intervalos.
+
+Referência: enunciado da atividade.
+
+7. Coleção de números em que os menores ficam à esquerda e os maiores ficam à direita
+
+Resposta: Árvore Binária de Busca ABB
+
+Essa é a regra principal de uma ABB. Os valores menores ficam à esquerda e os maiores ficam à direita.
+
+Essa organização permite que a busca utilize comparações para decidir qual caminho seguir.
+
+Referência: Árvores simples e busca básica.
+
+CONCLUSÃO
+
+A revisão mostrou que as árvores são estruturas hierárquicas usadas para organizar e buscar dados.
+
+A árvore binária permite no máximo dois filhos por nó. A ABB acrescenta uma regra de ordenação que ajuda a direcionar as buscas.
+
+Também foi possível relacionar as árvores balanceadas com a necessidade de controlar a forma da estrutura. A AVL utiliza balanceamento e rotações. A Red Black utiliza regras relacionadas às cores dos nós, além de recolorações e rotações.
+
+Os exemplos de B, B+, heap e trie foram identificados a partir das descrições presentes no enunciado, pois essas estruturas não foram encontradas de forma específica nos materiais fornecidos.
+
+A disciplina de Estrutura de Dados II dá continuidade aos fundamentos da Estrutura de Dados I e avança para estruturas mais complexas, incluindo árvores balanceadas e grafos. A prática de programação e o uso do GitHub também fazem parte da proposta da disciplina.
+
+REFERÊNCIAS
+
+KADIDJA VALÉRIA. Aula Inaugural, Estrutura de Dados II. Ciência da Computação. UDF, Centro Universitário. Material de aula.
+
+KADIDJA VALÉRIA. Representação de Dados e Estruturas em Python. Estrutura de Dados II, Unidade 1. UDF, Centro Universitário. Material de aula.
+
+KADIDJA VALÉRIA. Árvores simples e busca básica. Estrutura de Dados II, Ciência da Computação. Material de aula.
+
+CELES, Waldemar; RANGEL, José Lucas. Estruturas de Dados, 13. Árvores. Material de apoio utilizado na disciplina.
+
+GOMES, Paulo César Rodacki. Grafos, conceitos fundamentais, algoritmos e aplicações. Blumenau, Editora IFC, 2022.
+
+Observação: B, B+, heap e trie foram relacionados somente a partir das descrições presentes no enunciado da atividade. Essas estruturas não foram atribuídas às referências acima sem confirmação nos materiais.
